@@ -6,9 +6,10 @@
 #   movies = Movie.create([{ name: "Star Wars" }, { name: "Lord of the Rings" }])
 #   Character.create(name: "Luke", movie: movies.first)
 
-
-Post.create(title: Faker::Book.title, description:Faker::Lorem.paragraph_by_chars(number: 200, supplemental: false), when_went:, 
-    )
+number_of_posts = 6
+number_of_posts.times do
+Post.create(title: Faker::Book.title, description:Faker::Lorem.paragraph_by_chars(number: 200, supplemental: false))
+end
 
     i = 0
     until User.count == 20 do
@@ -22,7 +23,7 @@ posts = Post.all
 users = User.all
 
 
-until Comment.count == 1000 do
+until Comment.count == 10 do
     Comment.create(content: Faker::Lorem.paragraph_by_chars(number: 200,
     supplemental: false), post_id: posts.sample.id, user_id:users.sample.id)
 end
