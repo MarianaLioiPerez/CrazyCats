@@ -85,6 +85,4 @@ test:
 #
 production:
   <<: *default
-  database: CRAZYFORCATS_production
-  username: CRAZYFORCATS
-  password: <%= ENV["CRAZYFORCATS_DATABASE_PASSWORD"] %>
+ url: <%= ENV['DATABASE_URL']%>
