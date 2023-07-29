@@ -1,8 +1,8 @@
-<div>
+<div class="comentario2">
     <% @comments.each do |comment| %>
     <p>
-    <%= comment.user.name %>
-    <%= comment.content %>
+    <div class="nombre"><%= comment.user.name %></div>
+    <div  class="texto-comentario"><%= comment.content %></div>
     </p>
     <% end %>
 </div>

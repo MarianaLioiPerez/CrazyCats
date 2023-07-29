@@ -1,16 +1,21 @@
 <div id="<%= dom_id post %>">
-  <p>
-    <%= post.title %>
-  </p>
-
-  <p>
-    <%= post.description %>
-  </p>
 
 
-  <p><%if post.photo.persisted? %>
-     <%= image_tag post.photo %>
+  <p> 
+     <% if post.photo.persisted? %>
+     <%= image_tag post.photo , class:"foto-show"%>
       <%end%>
   </p>
 
+  <div>
+  <p class="titulo container w-50" >
+    <%= post.title%>
+  </p>
+
+  <p class="descripcion container w-50">
+    <%= post.description %>
+  </p>
+   </div>
 </div>
+
+

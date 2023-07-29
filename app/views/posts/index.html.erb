@@ -1,14 +1,19 @@
-<p style="color: green"><%= notice %></p>
+<div class="home">
 
-<h1>Posts</h1>
-
-<div id="posts">
-  <% @posts.each do |post| %>
-    <%= render post %>
-    <p>
-      <%= link_to "Show this post", post %>
-    </p>
-  <% end %>
+    <% @posts.each do |post| %>
+      <div class="card mb-3 tarjeta" style="max-width: 1200px;">
+        <div class="row g-0 tarjeta2">
+          <div class="col-md-4">
+            <%= image_tag post.photo, class: "img-fluid rounded-start foto" %>
+          </div>
+          <div class="col-md-8">
+            <div class="card-body">
+              <h5 class="card-title"><%= post.title %></h5>
+              <p class="card-text"><%= post.description %></p>
+              <p><%= link_to "VER POST", post, class:"link" %></p>
+            </div>
+          </div>
+        </div>
+      </div>
+    <% end %>
 </div>
-
-<%= link_to "New post", new_post_path %>

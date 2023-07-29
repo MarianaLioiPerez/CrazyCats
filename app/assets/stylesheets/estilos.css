@@ -1,0 +1,222 @@
+
+
+.foto{
+  object-fit: fill;
+}
+
+
+.tarjeta{
+    margin-left: 140px;
+}
+
+.body-new{
+    background-image: url('gato-3.jpg');
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+
+.nuevo{
+    font-size: 19px;
+    text-decoration: none;
+    font-family: 'Lobster', cursive;
+    color: black;
+    padding-left: 30px;
+}
+
+
+.foto-show{
+    width: 30%;
+}
+
+.card-title{
+    font-family: 'Ysabeau Infant', sans-serif;
+    font-weight: 600;
+}
+
+.card-text{
+    font-family: 'Ysabeau Infant', sans-serif;
+    font-weight: 400;
+}
+
+.link{
+    font-family: 'Ysabeau Infant', sans-serif;
+    font-weight: 900;
+    font-size: 15px;
+    text-decoration: none;
+    color:black;
+}
+
+.logo{
+    font-family: 'Ysabeau Infant', sans-serif;
+    font-size: 18px;
+    text-decoration: none;
+    font-weight: 900;
+    color: black;
+}
+
+.home{
+    background-image: url('gato-1.jpg');
+    background-repeat: no-repeat;
+    background-size: cover;
+    height: fit-content;
+    padding-top: 50px;
+    padding-bottom: 30px;
+}
+
+.card-body{
+    width: 80%;
+    margin-top: 40px;
+    margin-left: 60px;
+}
+
+.nuevo-post{
+  margin-top: 80px;
+}
+
+.formulario-new{
+    margin-top: 40px;
+
+}
+
+.formulario{
+    width: 500px;
+    height: 500px;
+    background-color:black;
+    border-radius: 10px;
+    color:white;
+    text-align: center;
+}
+
+.contenido{
+    margin-top: 40px;
+}
+
+.d1{
+    display: block;
+    margin-bottom: 20px;
+    text-align: center;
+}
+
+.titulo-new{
+    font-family: 'Lobster', cursive;
+    padding-top: 60px;
+}
+
+.show-body{
+    background-color: #F6F4EB;
+    text-align: center;
+}
+
+.edits{
+    display: inline-block;
+}
+
+.form{
+    box-sizing: border-box;
+}
+
+.link-vuelta{
+    text-decoration: none;
+    color: #91C8E4;
+    font-size: 25px;
+    font-weight: 600;
+    font-family: 'Ysabeau Infant', sans-serif;
+}
+
+.reaccion{
+    display: inline-flex;
+}
+
+.destroy{
+    display: inline-block;
+}
+
+.destroy , .reaccion , .edits{
+    margin-bottom: 12px;
+}
+
+.titulo{
+    font-family: 'Ysabeau Infant', sans-serif;
+    font-size: 20px;
+}
+
+.descripcion{
+    font-family: 'Ysabeau Infant', sans-serif;
+    width: 500px;
+}
+
+.field{
+    display: inline-block;
+}
+
+.nombre{
+    font-family: 'Ysabeau Infant', sans-serif;
+    font-weight: 600;
+    font-size: 18px;
+    display: inline-block;
+}
+
+.texto-comentario{
+    font-family: 'Ysabeau Infant', sans-serif;
+    display: inline-block;
+}
+
+.body-registro{
+    background-color: #EDE4FF;
+}
+
+.titulo-registro{
+    font-family: 'Lobster', cursive;
+    text-align: center;
+    padding-top: 80px;
+}
+
+.form-entrada{
+    text-align: center;
+    padding-top: 70px;
+    padding-bottom: 15px;
+}
+
+.field2{
+    padding-bottom: 15px;
+    display: inline-block;
+}
+
+.link-ingreso{
+    font-family: 'Ysabeau Infant', sans-serif;
+    padding-top: 20px;
+    text-decoration: none;
+    font-size: 18px;
+    font-weight: 500;
+}
+
+
+
+.texto-titulo{
+    font-family: 'Lobster', cursive;
+    text-align: center;
+    padding-top: 80px;
+    font-size: 35px;
+}
+
+.actions2{
+    text-align: center;
+    padding-bottom: 25px;
+    padding-top: 10px;
+}
+
+.field3{
+    text-align: center;
+}
+
+.form-log{
+    text-align: center;
+    margin-left: 380px !important;
+    padding-top: 30px;
+    padding-bottom: 20px;
+}
+
+.body-log-in{
+    background-color: #AED8CC;
+}

@@ -11,23 +11,22 @@
     </div>
   <% end %>
 
-  <div>
-    <%= form.label :title, style: "display: block" %>
-    <%= form.text_field :title %>
-  </div>
+<div class="d1">
+  <%= form.label :title, class:"d-block" %>
+  <%= form.text_field :title, class:"d-block form container w-50" %>
+</div>
 
-  <div>
-    <%= form.label :description, style: "display: block" %>
-    <%= form.text_field :description %>
-  </div>
+<div class="d1">
+  <%= form.label :description , class:"d-block" %>
+  <%= form.text_field :description, class:"d-block form container w-50 " %>
+</div>
 
-  <div class="form-group">
-    <%= form.label :photo %>
-    <%= form.file_field :photo , class: "form-control"%>
-  </div>
+<div class="form-group">
+  <%= form.label :photo, class:"d-block" %>
+  <%= form.file_field :photo, class:"d-block form container w-50" %>
+</div>
 
-
-  <div>
-    <%= form.submit %>
-  </div>
+<div>
+  <%= form.submit %>
+</div>
 <% end %>

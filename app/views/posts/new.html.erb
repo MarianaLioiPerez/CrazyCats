@@ -1,9 +1,18 @@
-<h1>New post</h1>
-
-<%= render "form", post: @post %>
-
-<br>
-
+<body class= "body-new">
+<div class="nuevo-post container-fluid">
 <div>
-  <%= link_to "Back to posts", posts_path %>
 </div>
+<div class="formulario container w-50 mt-4">
+  <div class="titulo-new"><h1>Nuevo Post</h1></div>
+
+  <div class="formulario-new"><%= render "form", post: @post %></div>
+
+  <br>
+
+  <div>
+    <%= link_to "volver", posts_path, class:"link-vuelta" %>
+  </div>
+
+  </div>
+</div>
+</body>
