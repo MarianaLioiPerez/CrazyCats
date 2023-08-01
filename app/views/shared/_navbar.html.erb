@@ -12,20 +12,20 @@
     
         <li class="nav-item dropdown">
           <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
-              <% if user_signed_in? %>
-              Hola <%= current_user.email %>
+              <% if cfcuser_signed_in? %>
+              Hola <%= current_cfcuser.email %>
                   <% else %>
                       REGISTRATE!
                       <% end %>
           </a>
          <ul class="dropdown-menu">
-           <% if user_signed_in? %>
-                <li><%= button_to 'Cerrar sesión', destroy_user_session_path, class: 'dropdown-item', method:
+           <% if cfcuser_signed_in? %>
+                <li><%= button_to 'Cerrar sesión', destroy_cfcuser_session_path, class: 'dropdown-item', method:
                 :delete %></li>
                 <% else %>
-                <li><%= link_to 'Iniciar sesión', new_user_session_path, class: 'dropdown-item'%></li>
+                <li><%= link_to 'Iniciar sesión', new_cfcuser_session_path, class: 'dropdown-item'%></li>
                 <li><hr class="dropdown-divider"></li>
-                <li><%= link_to 'Registro', new_user_registration_path, class: 'dropdown-item'%></li>
+                <li><%= link_to 'Registro', new_cfcuser_registration_path, class: 'dropdown-item'%></li>
                 <% end %>
          </ul>
         </li>

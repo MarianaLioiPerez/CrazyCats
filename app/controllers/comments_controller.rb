@@ -24,7 +24,7 @@ class CommentsController < ApplicationController
   def create
     @post = Post.find(params[:comment][:post_id])
     @comment = Comment.new(comment_params)
-    @comment.user = current_user
+    @comment.cfcuser = current_cfcuser
 
     respond_to do |format|
       if @comment.save
@@ -68,6 +68,6 @@ class CommentsController < ApplicationController
 
     # Only allow a list of trusted parameters through.
     def comment_params
-      params.require(:comment).permit(:content, :post_id, :user_id)
+      params.require(:comment).permit(:content, :post_id, :cfcuser_id)
     end
 end
