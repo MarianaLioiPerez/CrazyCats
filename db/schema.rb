@@ -58,7 +58,7 @@ ActiveRecord::Schema[7.0].define(version: 2023_07_23_020020) do
     t.string "photo"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
-    t.integer "post_id"
+    t.integer "cfcpost_id"
   end
 
   create_table "cfcreactions", force: :cascade do |t|
