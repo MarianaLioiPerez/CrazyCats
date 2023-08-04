@@ -1,0 +1,10 @@
+<p style="color: green"><%= notice %></p>
+
+<%= render @cfccomment %>
+
+<div>
+  <%= link_to "Edit ", edit_cfccomment_path(@cfccomment) %> |
+  <%= link_to "Back", cfccomments_path %>
+
+  <%= button_to "Destroy", @cfccomment, method: :delete %>
+</div>

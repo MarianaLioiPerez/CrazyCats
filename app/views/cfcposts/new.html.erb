@@ -1,0 +1,18 @@
+<body class= "body-new">
+<div class="nuevo-cfcpost container-fluid">
+<div>
+</div>
+<div class="formulario container w-50 mt-4">
+  <div class="titulo-new"><h1>Nuevo post</h1></div>
+
+  <div class="formulario-new"><%= render "form", cfcpost: @cfcpost %></div>
+
+  <br>
+
+  <div>
+    <%= link_to "volver", cfcposts_path, class:"link-vuelta" %>
+  </div>
+
+  </div>
+</div>
+</body>

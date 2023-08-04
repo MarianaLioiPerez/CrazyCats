@@ -1,0 +1,10 @@
+
+
+<div class="comentario2">
+    <% @cfccomments.each do |cfccomment| %>
+    <p>
+    <div class="nombre"><%= cfccomment.cfcuser.name %></div>
+    <div  class="texto-comentario"><%= cfccomment.content %></div>
+    </p>
+    <% end %>
+</div>

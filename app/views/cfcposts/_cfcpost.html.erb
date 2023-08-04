@@ -1,0 +1,19 @@
+<div id="<%= dom_id cfcpost %>">
+
+
+  <p> 
+     <% if cfcpost.photo.persisted? %>
+     <%= image_tag cfcpost.photo , class:"foto-show"%>
+      <%end%>
+  </p>
+
+  <div>
+  <p class="titulo container w-50" >
+    <%= cfcpost.title%>
+  </p>
+
+  <p class="descripcion container w-50">
+    <%= cfcpost.description %>
+  </p>
+   </div>
+</div>

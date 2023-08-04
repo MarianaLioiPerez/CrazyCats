@@ -1,0 +1,11 @@
+# Read about fixtures at https://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  content: MyString
+  cfcpost: one
+  cfcuser: one
+
+two:
+  content: MyString
+  cfcpost: two
+  cfcuser: two

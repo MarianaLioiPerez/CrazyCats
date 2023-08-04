@@ -42,6 +42,38 @@ ActiveRecord::Schema[7.0].define(version: 2023_07_23_020020) do
     t.index ["blob_id", "variation_digest"], name: "index_active_storage_variant_records_uniqueness", unique: true
   end
 
+  create_table "cfccomments", force: :cascade do |t|
+    t.string "content"
+    t.bigint "cfcpost_id", null: false
+    t.bigint "cfcuser_id", null: false
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+    t.index ["cfcpost_id"], name: "index_cfccomments_on_cfcpost_id"
+    t.index ["cfcuser_id"], name: "index_cfccomments_on_cfcuser_id"
+  end
+
+  create_table "cfcposts", force: :cascade do |t|
+    t.string "title"
+    t.string "description"
+    t.string "photo"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+    t.integer "post_id"
+  end
+
+  create_table "cfcreactions", force: :cascade do |t|
+    t.string "reaction_type"
+    t.string "kind"
+    t.bigint "cfccomments_id", null: false
+    t.bigint "cfcuser_id", null: false
+    t.bigint "cfcpost_id", null: false
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+    t.index ["cfccomments_id"], name: "index_cfcreactions_on_cfccomments_id"
+    t.index ["cfcpost_id"], name: "index_cfcreactions_on_cfcpost_id"
+    t.index ["cfcuser_id"], name: "index_cfcreactions_on_cfcuser_id"
+  end
+
   create_table "cfcusers", force: :cascade do |t|
     t.string "email", default: "", null: false
     t.string "encrypted_password", default: "", null: false
@@ -56,44 +88,11 @@ ActiveRecord::Schema[7.0].define(version: 2023_07_23_020020) do
     t.index ["reset_password_token"], name: "index_cfcusers_on_reset_password_token", unique: true
   end
 
-  create_table "comments", force: :cascade do |t|
-    t.string "content"
-    t.bigint "post_id", null: false
-    t.bigint "cfcuser_id", null: false
-    t.datetime "created_at", null: false
-    t.datetime "updated_at", null: false
-    t.index ["cfcuser_id"], name: "index_comments_on_cfcuser_id"
-    t.index ["post_id"], name: "index_comments_on_post_id"
-  end
-
-  create_table "posts", force: :cascade do |t|
-    t.string "title"
-    t.string "description"
-    t.datetime "when_went"
-    t.string "photo"
-    t.datetime "created_at", null: false
-    t.datetime "updated_at", null: false
-    t.integer "post_id"
-  end
-
-  create_table "reactions", force: :cascade do |t|
-    t.bigint "post_id", null: false
-    t.bigint "cfcuser_id", null: false
-    t.string "kind"
-    t.string "reaction_type"
-    t.bigint "comment_id", null: false
-    t.datetime "created_at", null: false
-    t.datetime "updated_at", null: false
-    t.index ["cfcuser_id"], name: "index_reactions_on_cfcuser_id"
-    t.index ["comment_id"], name: "index_reactions_on_comment_id"
-    t.index ["post_id"], name: "index_reactions_on_post_id"
-  end
-
   add_foreign_key "active_storage_attachments", "active_storage_blobs", column: "blob_id"
   add_foreign_key "active_storage_variant_records", "active_storage_blobs", column: "blob_id"
-  add_foreign_key "comments", "cfcusers"
-  add_foreign_key "comments", "posts"
-  add_foreign_key "reactions", "cfcusers"
-  add_foreign_key "reactions", "comments"
-  add_foreign_key "reactions", "posts"
+  add_foreign_key "cfccomments", "cfcposts"
+  add_foreign_key "cfccomments", "cfcusers"
+  add_foreign_key "cfcreactions", "cfccomments", column: "cfccomments_id"
+  add_foreign_key "cfcreactions", "cfcposts"
+  add_foreign_key "cfcreactions", "cfcusers"
 end

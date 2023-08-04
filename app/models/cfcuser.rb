@@ -4,8 +4,8 @@ class Cfcuser < ApplicationRecord
   devise :database_authenticatable, :registerable,
          :recoverable, :rememberable, :validatable
 
-        has_many :comments
-        has_many :posts , through: :reactions
-        has_many :reactions
+        has_many :cfccomments
+        has_many :cfcposts , through: :reactions
+        has_many :cfcreactions
 
 end

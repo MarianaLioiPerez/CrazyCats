@@ -1,0 +1,42 @@
+<%= form_with(model: cfcreaction) do |form| %>
+  <% if cfcreaction.errors.any? %>
+    <div style="color: red">
+      <h2><%= pluralize(cfcreaction.errors.count, "error") %> prohibited this cfcreaction from being saved:</h2>
+
+      <ul>
+        <% cfcreaction.errors.each do |error| %>
+          <li><%= error.full_message %></li>
+        <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <div>
+    <%= form.label :reaction_type, style: "display: block" %>
+    <%= form.text_field :reaction_type %>
+  </div>
+
+  <div>
+    <%= form.label :kind, style: "display: block" %>
+    <%= form.text_field :kind %>
+  </div>
+
+  <div>
+    <%= form.label :cfccomments_id, style: "display: block" %>
+    <%= form.text_field :cfccomments_id %>
+  </div>
+
+  <div>
+    <%= form.label :cfcuser_id, style: "display: block" %>
+    <%= form.text_field :cfcuser_id %>
+  </div>
+
+  <div>
+    <%= form.label :cfcpost_id, style: "display: block" %>
+    <%= form.text_field :cfcpost_id %>
+  </div>
+
+  <div>
+    <%= form.submit %>
+  </div>
+<% end %>

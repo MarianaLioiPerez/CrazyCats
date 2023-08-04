@@ -1,0 +1,47 @@
+<body class= "show-body">
+  
+
+<p style="color: green"><%= notice %></p>
+
+<%= render @cfcpost %>
+
+<%= form_with(model: @cfccomment, local: true) do |f| %>
+<% if @cfccomment.errors.any? %>
+  <div id = 'error_explanation'>
+  <h2>Este comentario no se pudo crear por las siguientes
+  razones</h2>
+  <ul>
+    <% @cfccomment.errors.full_messages.each do |msg|%>
+    <li><%= msg %></li>
+    <% end %>
+  </ul>
+</div>
+<% end %>
+
+  <%= f.hidden_field :cfcpost_id, value: @cfcpost.id %>
+    <div class = 'field'>
+    <%= f.label :content, as: "comentarios" %>
+    <%= f.text_field :content %>
+    <div class = 'actions'>
+    <%= f.submit %>
+  </div>
+<% end %>
+<%= render 'cfccomments/cfccomentario_post' %>
+
+ <div class="reaccion">
+    <% Cfcpost::Kinds.each do |kind| %>
+      <%= button_to "#{Cfcpost::KindsSpanish[kind]}",
+      new_cfcuser_reaction_path(cfcpost_id: @cfcpost.id, reaction_type:
+      "cfcpost", kind: kind), method: :cfcpost %>
+    <% end %>
+  </div>
+
+<div>
+  <div class="edits">
+  <%= link_to "Edit this", edit_cfcpost_path(@cfcpost) %> |
+  <%= link_to "Back", cfcposts_path %>
+  </div>
+  <%= button_to "Destroy", @cfcpost, method: :delete, class:"destroy" %>
+
+</div>
+</body>

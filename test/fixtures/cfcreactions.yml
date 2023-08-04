@@ -1,0 +1,15 @@
+# Read about fixtures at https://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  reaction_type: MyString
+  kind: MyString
+  cfccomments: one
+  cfcuser: one
+  cfcpost: one
+
+two:
+  reaction_type: MyString
+  kind: MyString
+  cfccomments: two
+  cfcuser: two
+  cfcpost: two

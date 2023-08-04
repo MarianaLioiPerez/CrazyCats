@@ -1,0 +1,14 @@
+<p style="color: green"><%= notice %></p>
+
+<h1>Cfccomments</h1>
+
+<div id="cfccomments">
+  <% @cfccomments.each do |cfccomment| %>
+    <%= render cfccomment %>
+    <p>
+      <%= link_to "Show", cfccomment %>
+    </p>
+  <% end %>
+</div>
+
+<%= link_to "New", new_cfccomment_path %>

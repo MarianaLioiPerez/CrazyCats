@@ -1,12 +1,14 @@
 Rails.application.routes.draw do
+  resources :cfcreactions
+  resources :cfccomments
+  resources :cfcposts
   devise_for :cfcusers
-  resources :posts
-  resources :comments, only: [:create]
+  resources :cfccomments, only: [:create]
   # Define your application routes per the DSL in https://guides.rubyonrails.org/routing.html
    
 
-  post '/new_user_reaction', to: 'reactions#new_user_reaction', as:'new_user_reaction'
+  post '/new_cfcuser_reaction', to: 'reactions#new_cfcuser_reaction', as:'new_cfcuser_reaction'
 
   # Defines the root path route ("/")
-   root "posts#index"
+   root "cfcposts#index"
 end

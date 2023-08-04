@@ -1,0 +1,10 @@
+<p style="color: green"><%= notice %></p>
+
+<%= render @cfcreaction %>
+
+<div>
+  <%= link_to "Edit this cfcreaction", edit_cfcreaction_path(@cfcreaction) %> |
+  <%= link_to "Back to cfcreactions", cfcreactions_path %>
+
+  <%= button_to "Destroy this cfcreaction", @cfcreaction, method: :delete %>
+</div>

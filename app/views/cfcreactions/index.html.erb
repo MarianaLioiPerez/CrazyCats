@@ -1,0 +1,14 @@
+<p style="color: green"><%= notice %></p>
+
+<h1>Cfcreactions</h1>
+
+<div id="cfcreactions">
+  <% @cfcreactions.each do |cfcreaction| %>
+    <%= render cfcreaction %>
+    <p>
+      <%= link_to "Show this cfcreaction", cfcreaction %>
+    </p>
+  <% end %>
+</div>
+
+<%= link_to "New cfcreaction", new_cfcreaction_path %>
