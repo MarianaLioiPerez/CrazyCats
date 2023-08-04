@@ -1,7 +1,7 @@
 class Cfcpost < ApplicationRecord
     has_many :cfccomments, dependent: :destroy 
     has_many :cfcreactions, dependent: :destroy
-    has_many :cfcusers, through: :reactions
+    has_many :cfcusers, through: :cfcreactions
 
     has_one_attached :photo
     Kinds = %w[like dislike].freeze
