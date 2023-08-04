@@ -220,3 +220,14 @@
 .body-log-in{
     background-color: #AED8CC;
 }
+
+.edit-body{
+    background-color: #C1ECE4;
+    text-align: center;
+}
+
+.titulo-edit{
+    margin-top: 100px;
+    font-family: 'Lobster', cursive;
+    margin-bottom: 40px;
+}
